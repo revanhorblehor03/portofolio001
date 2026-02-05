@@ -1,0 +1,193 @@
+/* --- Reset Default Browser --- */
+* {
+    margin: 0;          /* Menghapus jarak bawaan luar */
+    padding: 0;         /* Menghapus jarak bawaan dalam */
+    box-sizing: border-box; /* Agar padding tidak merusak ukuran elemen */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font modern */
+    scroll-behavior: smooth; /* Efek scroll halus saat klik menu navigasi */
+}
+
+body {
+    background-color: #f4f7f6; /* Warna latar belakang umum (putih keabuan) */
+    color: #333;               /* Warna teks utama */
+    line-height: 1.6;          /* Jarak antar baris teks agar enak dibaca */
+}
+
+/* --- Navigasi --- */
+header {
+    background-color: #0a192f; /* Biru Gelap */
+    padding: 20px 0;
+    position: sticky;          /* Navigasi tetap di atas saat scroll */
+    top: 0;
+    z-index: 1000;             /* Agar navigasi tidak tertutup konten lain */
+}
+
+nav {
+    display: flex;             /* Mengaktifkan flexbox */
+    justify-content: space-between; /* Logo di kiri, Menu di kanan */
+    align-items: center;       /* Rata tengah secara vertikal */
+    max-width: 1100px;         /* Lebar maksimal navigasi */
+    margin: 0 auto;            /* Posisi navigasi di tengah layar */
+    padding: 0 20px;
+}
+
+.logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #007bff;            /* Warna biru cerah untuk variasi kata Porto */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;          /* Menghapus titik pada list */
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;     /* Menghapus garis bawah link */
+    font-weight: 500;
+    transition: 0.3s;          /* Efek transisi saat hover */
+}
+
+nav ul li a:hover {
+    color: #007bff;            /* Berubah warna saat kursor menyentuh link */
+}
+
+/* --- Bagian Hero (Home) --- */
+.hero {
+    height: 90vh;              /* Tinggi hero 90% dari tinggi layar */
+    background-color: #0a192f; /* Biru Gelap */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 0 50px;
+}
+
+.hero-content {
+    flex: 1;                   /* Mengambil ruang yang tersedia */
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;         /* Ukuran teks nama yang besar */
+    margin-bottom: 10px;
+}
+
+.btn-hero {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;        /* Membuat sudut tumpul pada tombol */
+    transition: 0.3s;
+}
+
+.btn-hero:hover {
+    background-color: #0056b3; /* Warna lebih gelap saat tombol ditekan */
+}
+
+.hero-logo img {
+    width: 300px;              /* Ukuran gambar profil */
+    border-radius: 50%;        /* Membuat gambar menjadi bulat */
+    border: 5px solid #007bff; /* Bingkai biru di sekitar foto */
+}
+
+/* --- Bagian Container Umum --- */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 20px;        /* Jarak antar section */
+}
+
+h2 {
+    text-align: center;        /* Judul section di tengah */
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* --- Bagian About --- */
+.about-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Bayangan lembut agar terlihat timbul */
+}
+
+/* --- Bagian Proyek (Grid) --- */
+.bg-light { background-color: #f9f9f9; }
+
+.proyek-grid {
+    display: grid;             /* Mengaktifkan Grid */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsif: minimal 300px per kolom */
+    gap: 20px;                 /* Jarak antar kartu proyek */
+}
+
+.proyek-card {
+    background: #fff;
+    text-decoration: none;
+    color: #333;
+    border-radius: 10px;
+    overflow: hidden;          /* Potong bagian gambar yang keluar border */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s; /* Efek kartu terangkat saat hover */
+}
+
+.proyek-card:hover {
+    transform: translateY(-10px); /* Kartu naik sedikit saat disentuh kursor */
+}
+
+.proyek-card img {
+    width: 100%;               /* Gambar memenuhi lebar kartu */
+    height: 200px;
+    object-fit: cover;         /* Gambar tidak gepeng (terpotong rapi) */
+}
+
+.proyek-info {
+    padding: 20px;
+}
+
+/* --- Bagian Medsos --- */
+.medsos-list {
+    display: flex;
+    justify-content: center;   /* Icon medsos di tengah */
+    gap: 30px;                 /* Jarak antar icon */
+    flex-wrap: wrap;           /* Agar icon turun ke bawah jika layar sempit */
+}
+
+.medsos-item {
+    text-align: center;
+    text-decoration: none;
+    color: #0a192f;
+    font-weight: bold;
+}
+
+.medsos-item img {
+    width: 50px;               /* Ukuran logo medsos */
+    display: block;
+    margin: 0 auto 10px;
+    transition: 0.3s;
+}
+
+.medsos-item:hover img {
+    transform: scale(1.2);     /* Logo membesar sedikit saat hover */
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #0a192f;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+}
